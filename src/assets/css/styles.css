@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(43, 43, 43);
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 1em 0em !important;
+  background: #512da8;
+}
+.nav-solid {
+  box-shadow: 0px 2px 3px black;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: black;
+  cursor: pointer;
+  margin-right: auto;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+.nav__links {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: normal;
+  color: grey;
+  text-decoration: none;
+}
+
+.nav__links li a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.boton {
+  margin-left: 30px;
+}
+
+.content {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 400px;
+  background-color: #512da8;
+}
+
+.container {
+  font-family: "Montserrat", sans-serif;
+}
+
+.texto__bienvenida {
+  font-weight: 800;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  background: transparent;
+  line-height: 470px;
+}
+
+.titulo {
+  margin-top: -60px;
+  text-align: center;
+  font-size: 2.7em;
+  font-weight: 800;
+}
+
+.sobre__mi {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1.5em 0em;
+  opacity: 80%;
+}
+.icono {
+  color: #512da8;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1em 0em;
+}
+.info__titulo {
+  padding: 0.5em;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.info__descripcion {
+  text-align: center;
+  opacity: 80%;
+}
