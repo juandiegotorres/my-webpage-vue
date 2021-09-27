@@ -1,20 +1,127 @@
 <template>
   <div>
-    <div class="content">
-      <h1 class="texto__bienvenida">Bienvenido/a a mi página web</h1>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#512DA8"
-        fill-opacity="1"
-        d="M0,96L48,80C96,64,192,32,288,42.7C384,53,480,107,576,144C672,181,768,203,864,186.7C960,171,1056,117,1152,122.7C1248,128,1344,192,1392,224L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-      ></path>
+    <svg
+      id="visual"
+      class="burbuja__"
+      viewBox="0 0 960 540"
+      width="100%"
+      height="540"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+    >
+      <g transform="translate(485.43931554858347 282.8487861846266)">
+        <path
+          id="blob1"
+          d="M93.8 -92.4C125.8 -61.8 158.9 -30.9 159.3 0.5C159.8 31.8 127.6 63.6 95.6 84.7C63.6 105.8 31.8 116.2 -8 124.2C-47.7 132.1 -95.5 137.7 -127.1 116.6C-158.8 95.5 -174.4 47.7 -169.2 5.2C-163.9 -37.2 -137.8 -74.5 -106.1 -105.1C-74.5 -135.8 -37.2 -159.9 -3.2 -156.7C30.9 -153.5 61.8 -123.1 93.8 -92.4"
+          fill="#341776"
+        ></path>
+      </g>
+
+      <g transform="translate(491.03140464555617 259.9050280804715)">
+        <path
+          id="blob2"
+          style="visibility: hidden"
+          d="M102.6 -102.4C129.8 -75.4 146.4 -37.7 150.2 3.8C153.9 45.3 144.8 90.5 117.7 123.8C90.5 157.2 45.3 178.6 7.7 170.9C-29.8 163.2 -59.7 126.3 -92.7 93C-125.7 59.7 -161.8 29.8 -170.8 -8.9C-179.7 -47.7 -161.5 -95.5 -128.5 -122.5C-95.5 -149.5 -47.7 -155.7 -5 -150.7C37.7 -145.7 75.4 -129.4 102.6 -102.4"
+          fill="#341776"
+        ></path>
+      </g>
     </svg>
+    <div class="content">
+      <span class="redes__ ">
+        <a href="https://www.instagram.com/juandtorres0/" target="_blank">
+          <img
+            src="https://icongr.am/entypo/instagram.svg?size=128&color=ffffff"
+            alt=""
+            class="icono__redes"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/jtdeveloper/" target="_blank">
+          <img
+            src="https://icongr.am/entypo/linkedin.svg?size=128&color=ffffff"
+            alt=""
+            class="icono__redes"
+          />
+        </a>
+        <a href="https://github.com/juandiegotorres/" target="_blank">
+          <img
+            src="https://icongr.am/fontawesome/github.svg?size=128&color=ffffff"
+            alt=""
+            class="icono__redes"
+          />
+        </a>
+      </span>
+      <span class="bienvenida__">
+        <!-- <ul>
+          <li class="titulo__bienvenida">Bienvenido</li>
+          <li class="titulo__bienvenida">Bienvenida</li>
+          <li class="titulo__bienvenida">Bienvenidx</li>
+        </ul> -->
+        <h1 class="titulo__bienvenida">Bienvenido/a a mi página web</h1>
+        <h5 class="subtitulo__bienvenida">
+          Mi nombre es Juan y soy Analista-Programador de sistemas
+        </h5>
+      </span>
+      <span class="contenedor__imagen">
+        <img
+          :src="require('@/assets/images/developer1.svg')"
+          alt=""
+          class="img__inicio"
+        />
+      </span>
+    </div>
+
+    <div class="spacer curva__1"></div>
   </div>
 </template>
-
 <script>
+import KUTE from "kute.js";
+
 export default {
   name: "Contenido",
+
+  data() {
+    return {
+      window: {
+        width: 0,
+        height: 0,
+      },
+    };
+  },
+
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+
+  mounted() {
+    KUTE.fromTo(
+      "#blob1",
+      { path: "#blob1" },
+      { path: "#blob2" },
+      { repeat: 999, duration: 3000, yoyo: true },
+    ).start();
+  },
+
+  methods: {
+    funcion1() {
+      if (screen.width <= 810) {
+        this.result = false;
+      }
+    },
+    handleResize() {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
+    },
+  },
+  // data() {
+  //   return {
+  //     image: require("./assets/images/programador.svg"),
+  //   };
+  // },
 };
 </script>
