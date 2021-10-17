@@ -1,0 +1,184 @@
+@media (max-width: 1300px) {
+  .titulo__bienvenida {
+    font-size: 4em;
+  }
+  .spacer {
+    margin-top: -1em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    justify-content: space-around;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .titulo__bienvenida {
+    font-size: 4.2em;
+  }
+  .spacer {
+    margin-top: -1em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .content {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .redes__ {
+    align-items: flex-end;
+    padding-right: 2em;
+  }
+
+  .titulo__bienvenida {
+    font-size: 3.6em;
+  }
+  .subtitulo__bienvenida {
+    font-size: 1.3em;
+  }
+  .redes__ {
+    margin-top: 0.5em;
+  }
+  .img__inicio {
+    width: 17em;
+    height: 17em;
+    margin-bottom: 1.6em;
+  }
+}
+@media (max-width: 992px) {
+  .content {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .redes__ {
+    align-items: flex-end;
+    padding-right: 2em;
+  }
+
+  .titulo__bienvenida {
+    width: 55vw;
+    font-size: 3.2em;
+  }
+  .subtitulo__bienvenida {
+    font-size: 1.3em;
+  }
+  .contenedor__titulo {
+    padding-right: 1em !important;
+    padding-left: 1em !important;
+  }
+  .contenedor__imagen {
+    padding-bottom: 3em;
+    margin-left: 2em;
+  }
+  .redes__ {
+    margin-top: 0.5em;
+  }
+  .img__inicio {
+    width: 14em;
+    height: 14em;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    justify-content: center;
+    margin-top: 1em;
+    height: 80vh;
+    padding-top: 1em;
+  }
+  .bienvenida__ {
+    width: 100vh;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo__bienvenida {
+    width: 80vw;
+    text-align: center;
+    font-size: 4.2em;
+  }
+
+  .redes__ {
+    display: none;
+  }
+  .contenedor__imagen {
+    display: none;
+  }
+
+  .subtitulo__bienvenida {
+    width: 75vw;
+    margin-top: 2em;
+    font-weight: 800;
+    background-color: rgb(201, 200, 200);
+    color: rgb(50, 50, 50);
+    text-shadow: 0.1rem 0.1rem 0px rgb(179, 157, 219);
+    border-radius: 40px;
+    text-align: center;
+    padding: 1.2em;
+    box-shadow: rgba(4, 224, 137, 0.4) 0px 5px, rgba(4, 224, 137, 0.3) 0px 10px;
+    /* box-shadow: rgba(26, 35, 126, 0.4) 5px 5px, rgba(26, 35, 126, 0.3) 10px 10px; */
+  }
+
+  .titulo {
+    margin-top: -0.1em;
+  }
+
+  .img__inicio {
+    display: none;
+  }
+
+  .titulo {
+    margin-top: -0.1em;
+  }
+  .spacer {
+    margin-top: -0.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    margin-top: 0;
+  }
+
+  .img__perfil {
+    width: 6em;
+    height: 6em;
+  }
+
+  .titulo__bienvenida {
+    text-align: center;
+    font-size: 3.4em;
+  }
+
+  .subtitulo__bienvenida {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 474px) {
+  .titulo__bienvenida {
+    font-size: 2.8em;
+  }
+  .img__perfil {
+    width: 5em;
+    height: 5em;
+  }
+
+  .presentacion__curriculum {
+    padding-right: 1.5em;
+  }
+
+  .presentacion__curriculum h2 {
+    font-size: 1em;
+  }
+
+  .presentacion__curriculum h4 {
+    font-size: 0.8em;
+  }
+}

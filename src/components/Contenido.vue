@@ -1,73 +1,45 @@
 <template>
   <div>
-    <svg
-      id="visual"
-      class="burbuja__"
-      viewBox="0 0 960 540"
-      width="100%"
-      height="540"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      version="1.1"
-    >
-      <g transform="translate(485.43931554858347 282.8487861846266)">
-        <path
-          id="blob1"
-          d="M93.8 -92.4C125.8 -61.8 158.9 -30.9 159.3 0.5C159.8 31.8 127.6 63.6 95.6 84.7C63.6 105.8 31.8 116.2 -8 124.2C-47.7 132.1 -95.5 137.7 -127.1 116.6C-158.8 95.5 -174.4 47.7 -169.2 5.2C-163.9 -37.2 -137.8 -74.5 -106.1 -105.1C-74.5 -135.8 -37.2 -159.9 -3.2 -156.7C30.9 -153.5 61.8 -123.1 93.8 -92.4"
-          fill="#341776"
-        ></path>
-      </g>
-
-      <g transform="translate(491.03140464555617 259.9050280804715)">
-        <path
-          id="blob2"
-          style="visibility: hidden"
-          d="M102.6 -102.4C129.8 -75.4 146.4 -37.7 150.2 3.8C153.9 45.3 144.8 90.5 117.7 123.8C90.5 157.2 45.3 178.6 7.7 170.9C-29.8 163.2 -59.7 126.3 -92.7 93C-125.7 59.7 -161.8 29.8 -170.8 -8.9C-179.7 -47.7 -161.5 -95.5 -128.5 -122.5C-95.5 -149.5 -47.7 -155.7 -5 -150.7C37.7 -145.7 75.4 -129.4 102.6 -102.4"
-          fill="#341776"
-        ></path>
-      </g>
-    </svg>
     <div class="content">
-      <span class="redes__ ">
-        <a href="https://www.instagram.com/juandtorres0/" target="_blank">
-          <img
-            src="https://icongr.am/entypo/instagram.svg?size=128&color=ffffff"
-            alt=""
-            class="icono__redes"
-          />
-        </a>
-        <a href="https://www.linkedin.com/in/jtdeveloper/" target="_blank">
-          <img
-            src="https://icongr.am/entypo/linkedin.svg?size=128&color=ffffff"
-            alt=""
-            class="icono__redes"
-          />
-        </a>
-        <a href="https://github.com/juandiegotorres/" target="_blank">
-          <img
-            src="https://icongr.am/fontawesome/github.svg?size=128&color=ffffff"
-            alt=""
-            class="icono__redes"
-          />
-        </a>
-      </span>
       <span class="bienvenida__">
         <!-- <ul>
           <li class="titulo__bienvenida">Bienvenido</li>
           <li class="titulo__bienvenida">Bienvenida</li>
           <li class="titulo__bienvenida">Bienvenidx</li>
-        </ul> -->
-        <h1 class="titulo__bienvenida">Bienvenido/a a mi página web</h1>
-        <h5 class="subtitulo__bienvenida">
-          Mi nombre es Juan y soy Analista-Programador de sistemas
-        </h5>
+        </ul>-->
+        <h1 class="titulo__bienvenida">
+          Bienvenid
+          <span class="texto__tipeado">{{ valor }}</span>
+          <span class="cursor__" :class="{ 'tipeando': estado }">&nbsp;</span>
+          <br />a mi página web
+        </h1>
+        <h5 class="subtitulo__bienvenida">Mi nombre es Juan y soy Analista-Programador de sistemas</h5>
+        <span class="redes__">
+          <a href="https://www.instagram.com/juandtorres0/" target="_blank">
+            <img
+              src="https://icongr.am/entypo/instagram.svg?size=128&color=ffffff"
+              alt
+              class="icono__redes"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/jtdeveloper/" target="_blank">
+            <img
+              src="https://icongr.am/entypo/linkedin.svg?size=128&color=ffffff"
+              alt
+              class="icono__redes"
+            />
+          </a>
+          <a href="https://github.com/juandiegotorres/" target="_blank">
+            <img
+              src="https://icongr.am/fontawesome/github.svg?size=128&color=ffffff"
+              alt
+              class="icono__redes"
+            />
+          </a>
+        </span>
       </span>
       <span class="contenedor__imagen">
-        <img
-          :src="require('@/assets/images/developer1.svg')"
-          alt=""
-          class="img__inicio"
-        />
+        <img :src="require('@/assets/images/developer1.svg')" alt class="img__inicio" />
       </span>
     </div>
 
@@ -75,53 +47,62 @@
   </div>
 </template>
 <script>
-import KUTE from "kute.js";
 
 export default {
   name: "Contenido",
 
   data() {
     return {
-      window: {
-        width: 0,
-        height: 0,
-      },
+      valor: "",
+      estado: false,
+      arrayLetras: ["o", "a", "x"],
+      velocidadTipeado: 400,
+      velocidadBorrado: 100,
+      delayNuevaLetra: 2000,
+      arrayLetrasIndex: 0,
+      letraIndex: 0,
     };
   },
 
-  created() {
-    window.addEventListener("resize", this.handleResize);
-    this.handleResize();
-  },
-
-  destroyed() {
-    window.removeEventListener("resize", this.handleResize);
-  },
 
   mounted() {
-    KUTE.fromTo(
-      "#blob1",
-      { path: "#blob1" },
-      { path: "#blob2" },
-      { repeat: 999, duration: 3000, yoyo: true },
-    ).start();
   },
 
   methods: {
-    funcion1() {
-      if (screen.width <= 810) {
-        this.result = false;
+    tipearTexto() {
+      if (this.letraIndex < this.arrayLetras[this.arrayLetrasIndex].length) {
+        if (!this.estado)
+          this.estado = true;
+        this.valor += this.arrayLetras[this.arrayLetrasIndex].charAt(this.letraIndex);
+        this.letraIndex += 1;
+        setTimeout(this.tipearTexto, this.velocidadTipeado);
+      }
+      else {
+        this.estado = false;
+        setTimeout(this.borrarTexto, this.delayNuevaLetra);
       }
     },
-    handleResize() {
-      this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
-    },
+
+    borrarTexto() {
+      if (this.letraIndex > 0) {
+        if (!this.estado)
+          this.estado = true;
+        this.valor = this.arrayLetras[this.arrayLetrasIndex].substring(0, this.letraIndex - 1);
+        this.letraIndex -= 1;
+        setTimeout(this.borrarTexto, this.velocidadBorrado);
+      }
+      else {
+        this.estado = false;
+        this.arrayLetrasIndex += 1;
+        if (this.arrayLetrasIndex >= this.arrayLetras.length)
+          this.arrayLetrasIndex = 0;
+        setTimeout(this.tipearTexto, this.velocidadTipeado + 1000);
+      }
+    }
   },
-  // data() {
-  //   return {
-  //     image: require("./assets/images/programador.svg"),
-  //   };
-  // },
+
+  created() {
+    setTimeout(this.tipearTexto, this.delayNuevaLetra + 200);
+  }
 };
 </script>

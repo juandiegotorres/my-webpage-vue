@@ -11,20 +11,20 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <div class="mx-auto"></div>
         <ul class="navbar-nav text-white">
-          <li class="nav-item  px-4">
-            <a href="" class="nav-link nav__a text-white">Sobre Mí</a>
+          <li class="nav-item pl-4 pr-4">
+            <a href class="nav-link nav__a text-white">Sobre Mí</a>
           </li>
-          <li class="nav-item  px-3">
-            <a href="" class="nav-link nav__a text-white">Productos</a>
+          <li class="nav-item pl-3 pr-3">
+            <a href class="nav-link nav__a text-white">Productos</a>
           </li>
-          <li class="nav-item  px-3">
-            <a href="" class="nav-link nav__a text-white">Proyectos</a>
+          <li class="nav-item pl-3 pr-3">
+            <a href class="nav-link nav__a text-white">Proyectos</a>
           </li>
-          <li class="nav-item  px-3">
-            <a href="" class="nav-link nav__a text-white">Contacto</a>
+          <li class="nav-item pl-3 pr-3">
+            <a href class="nav-link nav__a text-white">Contacto</a>
           </li>
         </ul>
       </div>
@@ -36,8 +36,8 @@
 export default {
   name: "HeaderComponent",
   mounted() {
-    this.$nextTick(function() {
-      window.addEventListener("scroll", function() {
+    this.$nextTick(function () {
+      window.addEventListener("scroll", function () {
         var navbar = document.getElementById("nav");
         var nav_classes = navbar.classList;
         if (document.documentElement.scrollTop >= 400) {
