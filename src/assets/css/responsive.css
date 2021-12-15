@@ -5,6 +5,10 @@
   .spacer {
     margin-top: -1em;
   }
+
+  .curva__footer {
+    margin-bottom: -3rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -41,14 +45,22 @@
   }
   .redes__ {
     margin-top: 0.5em;
+    width: 25vw;
   }
   .img__inicio {
     width: 17em;
     height: 17em;
     margin-bottom: 1.6em;
   }
+  .modal-content {
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
 }
 @media (max-width: 992px) {
+  .navbar {
+    padding: 1.1em 2vw 1.1em 10vw;
+  }
+
   .content {
     justify-content: center;
     padding-left: 0;
@@ -78,15 +90,45 @@
   .redes__ {
     margin-top: 0.5em;
   }
+  .icono__redes {
+    margin-right: 1.8em;
+  }
   .img__inicio {
     width: 14em;
     height: 14em;
   }
+  .modal-content {
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  .curva__footer {
+    margin-bottom: -1.5rem;
+  }
+  .btn__mobile {
+    display: none;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+  .navbar {
+    justify-content: space-between !important;
+  }
+
+  .break {
+    width: 100%;
+    height: 0;
+  }
+  .nav-links {
+    background-color: turquoise;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkbtn {
+    background: red;
+    display: block;
+  }
+
   .content {
     justify-content: center;
-    margin-top: 1em;
     height: 80vh;
     padding-top: 1em;
   }
@@ -139,6 +181,39 @@
   .spacer {
     margin-top: -0.5em;
   }
+  .modal-content {
+    width: 90%; /* Could be more or less, depending on screen size */
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+
+    height: 7rem;
+  }
+  .texto__footer {
+    font-size: 0.9em;
+    margin-top: 1rem;
+  }
+  .redes__footer {
+    margin-bottom: 1rem;
+  }
+  .curva__footer {
+    margin-bottom: -1.1rem;
+  }
+  .btn__mobile {
+    display: block;
+    order: 3;
+  }
+
+  .btn__desktop {
+    display: none;
+  }
+  .col__mensaje {
+    order: 2;
+  }
+  .contacto__ {
+    height: 500px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -158,6 +233,16 @@
 
   .subtitulo__bienvenida {
     width: 80vw;
+  }
+
+  footer {
+    height: auto;
+  }
+  .texto__footer {
+    margin-bottom: 0.3rem;
+  }
+  .contacto__ {
+    height: 530px;
   }
 }
 
@@ -180,5 +265,16 @@
 
   .presentacion__curriculum h4 {
     font-size: 0.8em;
+  }
+  .curva__footer {
+    margin-bottom: -0.4rem;
+  }
+
+  .pro {
+    order: 2;
+  }
+
+  .pro1 {
+    order: 1;
   }
 }

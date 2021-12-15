@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <div class="content">
       <span class="bienvenida__">
         <!-- <ul>
@@ -13,23 +13,31 @@
           <span class="cursor__" :class="{ 'tipeando': estado }">&nbsp;</span>
           <br />a mi página web
         </h1>
-        <h5 class="subtitulo__bienvenida">Mi nombre es Juan y soy Analista-Programador de sistemas</h5>
+        <h2 class="subtitulo__bienvenida">Mi nombre es Juan y soy Analista-Programador de sistemas</h2>
         <span class="redes__">
-          <a href="https://www.instagram.com/juandtorres0/" target="_blank">
+          <a
+            href="https://www.instagram.com/juandtorres0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://icongr.am/entypo/instagram.svg?size=128&color=ffffff"
               alt
               class="icono__redes"
             />
           </a>
-          <a href="https://www.linkedin.com/in/jtdeveloper/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/jtdeveloper/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://icongr.am/entypo/linkedin.svg?size=128&color=ffffff"
               alt
               class="icono__redes"
             />
           </a>
-          <a href="https://github.com/juandiegotorres/" target="_blank">
+          <a href="https://github.com/juandiegotorres/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://icongr.am/fontawesome/github.svg?size=128&color=ffffff"
               alt
@@ -39,12 +47,12 @@
         </span>
       </span>
       <span class="contenedor__imagen">
-        <img :src="require('@/assets/images/developer1.svg')" alt class="img__inicio" />
+        <img :src="require('@/assets/images/undraw_programming.svg')" alt class="img__inicio" />
       </span>
     </div>
 
     <div class="spacer curva__1"></div>
-  </div>
+  </section>
 </template>
 <script>
 

@@ -1,56 +1,78 @@
 <template>
-  <div class="navbar navbar-expand-lg fixed-top" id="nav">
-    <div class="container">
-      <h2 class="logo text-white">JTDev</h2>
-      <button
-        class="navbar-toggler"
-        data-bs-target="#navbarNav"
-        data-bs-toggle="collapse"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="mx-auto"></div>
-        <ul class="navbar-nav text-white">
-          <li class="nav-item pl-4 pr-4">
-            <a href class="nav-link nav__a text-white">Sobre Mí</a>
-          </li>
-          <li class="nav-item pl-3 pr-3">
-            <a href class="nav-link nav__a text-white">Productos</a>
-          </li>
-          <li class="nav-item pl-3 pr-3">
-            <a href class="nav-link nav__a text-white">Proyectos</a>
-          </li>
-          <li class="nav-item pl-3 pr-3">
-            <a href class="nav-link nav__a text-white">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <nav id="nav-bar">
+    <!-- <img :src="require('@/assets/images/logo.png')" class="logo-xl" alt /> -->
+    <img
+      :src="require('@/assets/images/logo_mobile.png')"
+      class="logo-mobile"
+      alt
+      v-on:click="nav('inicio')"
+    />
+    <input type="checkbox" id="click" />
+    <label class="menu-btn" id="submenu" v-on:click="ulActivo">
+      <img src="https://icongr.am/entypo/menu.svg?size=40&color=ffffff" alt class="aaaa" />
+    </label>
+    <ul v-bind:class="{ 'ul__activo': estaActivo }" id="menu-mobile">
+      <li>
+        <a v-on:click="nav('sobre-mi')">Sobre Mí</a>
+      </li>
+      <li>
+        <a class v-on:click="nav('skills')">Skills</a>
+      </li>
+      <li>
+        <a v-on:click="nav('proyectos')">Proyectos</a>
+      </li>
+      <li>
+        <a v-on:click="nav('contacto')">Contacto</a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
 export default {
   name: "HeaderComponent",
+  data() {
+    return {
+      estaActivo: false,
+    }
+  },
   mounted() {
     this.$nextTick(function () {
       window.addEventListener("scroll", function () {
-        var navbar = document.getElementById("nav");
+        var navbar = document.getElementById("nav-bar");
         var nav_classes = navbar.classList;
-        if (document.documentElement.scrollTop >= 400) {
-          if (nav_classes.contains("nav-solid") === false) {
+        if (document.documentElement.scrollTop >= 500) {
+          if (nav_classes.contains("nav-solid") === false && nav_classes.contains("nav__sm") === false) {
             nav_classes.toggle("nav-solid");
+            nav_classes.toggle("nav__sm");
           }
         } else {
-          if (nav_classes.contains("nav-solid") === true) {
+          if (nav_classes.contains("nav-solid") === true && nav_classes.contains("nav__sm") === true) {
             nav_classes.toggle("nav-solid");
+            nav_classes.toggle("nav__sm");
           }
         }
       });
     });
   },
+  methods: {
+    nav(link) {
+      if (link == 'inicio') {
+        position = 0;
+      } else {
+        //Obtengo la posicion de la seccion
+        var position = document.getElementById(link).offsetTop;
+        //Cierro el menu-mobile si esta desde el telefono
+        this.estaActivo = false;
+        //Le resto a la posicion para que encuadre en la pantalla
+        position -= 92;
+      }
+      window.scrollTo({ top: position, behavior: "smooth" });
+    },
+
+    ulActivo() {
+      this.estaActivo = !this.estaActivo;
+    }
+  }
 };
 </script>
