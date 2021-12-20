@@ -22,7 +22,7 @@
           >
             <img
               src="https://icongr.am/entypo/instagram.svg?size=128&color=ffffff"
-              alt
+              alt="icono-instagram"
               class="icono__redes"
             />
           </a>
@@ -33,21 +33,25 @@
           >
             <img
               src="https://icongr.am/entypo/linkedin.svg?size=128&color=ffffff"
-              alt
+              alt="icono-linkedin"
               class="icono__redes"
             />
           </a>
           <a href="https://github.com/juandiegotorres/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://icongr.am/fontawesome/github.svg?size=128&color=ffffff"
-              alt
+              alt="icono-github"
               class="icono__redes"
             />
           </a>
         </span>
       </span>
       <span class="contenedor__imagen">
-        <img :src="require('@/assets/images/undraw_programming.svg')" alt class="img__inicio" />
+        <img
+          :src="require('@/assets/images/undraw_programming.svg')"
+          alt="img-inicio"
+          class="img__inicio"
+        />
       </span>
     </div>
 

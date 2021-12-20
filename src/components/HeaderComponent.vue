@@ -4,12 +4,12 @@
     <img
       :src="require('@/assets/images/logo_mobile.png')"
       class="logo-mobile"
-      alt
+      alt="logo"
       v-on:click="nav('inicio')"
     />
     <input type="checkbox" id="click" />
     <label class="menu-btn" id="submenu" v-on:click="ulActivo">
-      <img src="https://icongr.am/entypo/menu.svg?size=40&color=ffffff" alt class="aaaa" />
+      <img src="https://icongr.am/entypo/menu.svg?size=40&color=ffffff" alt="submenu" />
     </label>
     <ul v-bind:class="{ 'ul__activo': estaActivo }" id="menu-mobile">
       <li>

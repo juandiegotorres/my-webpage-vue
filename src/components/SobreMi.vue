@@ -4,29 +4,28 @@
       <h3 class="titulo">Sobre mí</h3>
       <div class="row">
         <div class="col-md-10 sss">
-          <p class="sobre__mi">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-            error reiciendis sit ullam expedita id est inventore dignissimos vel
-            minus sint necessitatibus, quam recusandae repellendus a natus
-            veritatis perferendis doloremque! Possimus nisi dicta veritatis eos
-            earum repudiandae accusamus soluta autem debitis repellendus libero
-            iure quae voluptatibus repellat natus dolorem, ex incidunt. Aliquam
-            ratione sunt inventore maiores ut necessitatibus nemo saepe. Eveniet
-            aliquam nemo numquam dignissimos. A necessitatibus dolor temporibus
-            accusamus accusantium error minus deserunt neque nisi dolores
-            sapiente tempore architecto, in pariatur ipsa fugiat fuga, quam,
-            impedit odit dolorum consequatur. Magni est, eligendi amet
-            reprehenderit dicta eaque quos! Neque ab ut iusto tempora facilis
-            fugit repellat nihil corporis officiis hic, quia molestiae,
-            accusamus delectus, optio nesciunt! Quis suscipit odit aspernatur.
-            Numquam nesciunt explicabo sed incidunt eum, pariatur beatae natus
-            aspernatur praesentium dolorum reiciendis quibusdam error maiores
-            dolorem. Eaque, assumenda perferendis, dolores doloremque aliquid
-            cum optio blanditiis deleniti, eos ad minus.
-          </p>
+          <div class="sobre__mi">
+            <p>¡Hola! Mi nombre es Juan Diego Torres y tengo 23 años. Soy un apasionado por la computación y todo lo que la rodea.</p>
+            <br />
+            <p>
+              En plena pandemia me recibí como
+              <b>técnico analista programador</b> y algunos meses después conseguí mi primer trabajo como programador full-stack. Actualmente, me encuentro trabajando con tecnologías como
+              <b>Laravel, MySQL, Bootstrap, jQuery y más.</b>
+            </p>
+            <br />
+            <p>
+              Mi objetivo a corto plazo es continuar
+              <b>aprendiendo</b> sobre la construcción de
+              <b>API RESTful</b> y su utilización, algo que desde hace tiempo me atrae mucho y tengo ganas de realizar proyectos con base en esto.
+            </p>
+            <br />
+            <p>
+              <b>Siempre tengo como finalidad poder desempeñar mis labores de la mejor forma posible, con ganas de crecer, pero sobre todo de seguir aprendiendo día a día de cada persona y cada experiencia.</b>
+            </p>
+          </div>
           <!-- <b-button v-b-modal.modal-scrollable class="btn-curriculum">Launch demo modal</b-button> -->
         </div>
-        <div class="col-md-6 d-flex mx-auto justify-content-center">
+        <div class="col-md-6 d-flex mx-auto justify-content-center mb-3">
           <button class="btn__secundario" id="myBtn" @click="showModal = true">Ver curriculum</button>
         </div>
       </div>
@@ -39,7 +38,11 @@
           <span class="close">&times;</span>
           <div class="row justify-content-center">
             <div class="contenedor__img__curriculum">
-              <img :src="require('@/assets/images/foto_perfil.jpg')" alt class="img__perfil" />
+              <img
+                :src="require('@/assets/images/foto_perfil.jpg')"
+                alt="Foto de perfil"
+                class="img__perfil"
+              />
             </div>
             <div class="presentacion__curriculum">
               <h2 class>Juan Diego Torres</h2>
@@ -78,7 +81,7 @@
                 </p>
                 <li>Técnico superior en análisis y programación de sistemas</li>
                 <li>Marzo 2017 - Diciembre 2020</li>
-                <h4 class="mt-2">Cursos:</h4>
+                <h4 class="mt-2 mb-2">Cursos:</h4>
                 <p class="mb-1">
                   <strong>Ingles aplicado a las TICS</strong>
                 </p>
@@ -124,7 +127,7 @@
               </div>
               <!-- ============ IDIOMAS ========= -->
               <div class="idiomas__curriculum">
-                <h3 class="text-center">Idiomas</h3>
+                <h3 class="text-center mb-1">Idiomas</h3>
                 <p>
                   <strong>Español</strong>
                 </p>
@@ -135,8 +138,7 @@
                 <li>Intermedio - Avanzado</li>
               </div>
             </div>
-            <div class="col-md-8 col-lg-12">
-              <!-- =============SKILLS ========== -->
+            <!-- <div class="col-md-8 col-lg-12">
               <div class="skills__curriculum">
                 <h4>Habilidades:</h4>
                 <p class="mt-2">
@@ -161,7 +163,7 @@
                 </p>
                 <li>VB.NET</li>
               </div>
-            </div>
+            </div>-->
           </div>
           <!-- =========== BTN DESCARGAR CURRICULUM ============ -->
           <div class="row justify-content-center mt-3 mb-2">

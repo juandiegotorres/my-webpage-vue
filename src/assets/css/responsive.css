@@ -111,7 +111,9 @@
   .navbar {
     justify-content: space-between !important;
   }
-
+  .mt-mb-3 {
+    margin-top: 2rem;
+  }
   .break {
     width: 100%;
     height: 0;
@@ -129,7 +131,7 @@
 
   .content {
     justify-content: center;
-    height: 80vh;
+    height: 85vh;
     padding-top: 1em;
   }
   .bienvenida__ {
@@ -212,13 +214,28 @@
     order: 2;
   }
   .contacto__ {
-    height: 500px;
+    height: 600px;
+  }
+  .notificacion__container {
+    padding: 2em 1.5em;
+  }
+
+  .notificacion__title {
+    font-size: 2rem;
+  }
+
+  .notificacion__title {
+    font-size: 2rem;
+  }
+  .notificacion__paragraph {
+    text-align: center;
   }
 }
 
 @media (max-width: 576px) {
   .content {
     margin-top: 0;
+    padding-top: 4em;
   }
 
   .img__perfil {
@@ -242,7 +259,7 @@
     margin-bottom: 0.3rem;
   }
   .contacto__ {
-    height: 530px;
+    height: 600px;
   }
 }
 

@@ -8,6 +8,7 @@
   --color-terciario: #b1ffe0;
   --fuente: "Montserrat", sans-serif;
   --fuente-secundaria: "Nunito", sans-serif;
+  --redondeo: 2em;
 }
 
 * {
@@ -242,15 +243,13 @@ input[type="checkbox"] {
   justify-content: space-between;
   width: 15vw;
   margin-top: 1em;
+  padding: 1em 0em;
 }
 
 .icono__redes {
-  width: 2em;
-  height: 2em;
-  margin: 0.9em 0em;
+  width: 2.2em;
+  height: 2.2em;
   animation: zoom-out 0.6s;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  margin-right: 1.8em;
 }
 
 .bienvenida__ {
@@ -275,6 +274,7 @@ input[type="checkbox"] {
   font-size: 1.8em;
   text-align: left;
   margin-top: 0.5em;
+  margin-bottom: 1em;
 }
 
 .contenedor__imagen {
@@ -342,10 +342,10 @@ input[type="checkbox"] {
 }
 
 .icono__redes:hover {
-  animation: zoom 0.5s;
-  animation-fill-mode: forwards;
+  transform: scale(1.7);
+  transition: 0.5s ease;
 }
-
+/*  */
 @keyframes zoom {
   0% {
     transform: scale(1);
@@ -374,7 +374,7 @@ input[type="checkbox"] {
   margin-top: 1em;
   padding: 1rem 1.5rem 1.5rem 1.5rem;
   border: 2px solid var(--color-primario);
-  border-radius: 40px;
+  border-radius: var(--redondeo);
 }
 
 .titulo__skill {
@@ -397,6 +397,7 @@ input[type="checkbox"] {
   font-size: 1.2em;
   padding: 1.5em 0em;
   opacity: 80%;
+  margin-bottom: 1em;
 }
 .icono {
   color: var(--color-primario);
@@ -476,17 +477,18 @@ input[type="checkbox"] {
 .skills__curriculum,
 .idiomas__curriculum,
 .metodologias__curriculum {
-  border-radius: 40px;
+  border-radius: var(--redondeo);
   font-family: var(--fuente);
-  padding: 1.5em;
+  border: 2px solid var(--color-secundario);
+  padding: 1em 1.5em 1.5em 1.5em;
   margin-top: 1.5em;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.sobremi__curriculum {
+/* .sobremi__curriculum {
   background-color: var(--color-secundario);
-}
+} */
 .presentacion__curriculum h2,
 .sobremi__curriculum h4,
 .formacion__curriculum h4,
@@ -502,7 +504,16 @@ input[type="checkbox"] {
   text-decoration: none;
   color: var(--color-primario);
 }
-.skills__curriculum,
+
+.sobremi__curriculum h3,
+.formacion__curriculum h3,
+.experiencia__curriculum h3,
+.skills__curriculum h3,
+.idiomas__curriculum h3,
+.metodologias__curriculum h3 {
+  font-size: 1.4em;
+}
+/* .skills__curriculum,
 .idiomas__curriculum {
   background-color: var(--color-secundario);
 }
@@ -511,7 +522,7 @@ input[type="checkbox"] {
 .experiencia__curriculum,
 .metodologias__curriculum {
   background-color: var(--color-terciario);
-}
+} */
 
 /* ========================== TIPEADO DE TEXTO =================================== */
 /* ========================== TIPEADO DE TEXTO ===================================
@@ -557,15 +568,25 @@ span.cursor__.tipeando {
   margin-bottom: 1em;
 }
 
+.card__ {
+  top: 0px;
+  transition: all 0.2s;
+}
+
+.card__:hover {
+  top: -20px;
+  transition: top 0.2s;
+}
+
 .sombra__card {
-  border-radius: 25px;
+  border-radius: var(--redondeo);
   box-shadow: rgba(4, 224, 137, 0.4) 4px 4px, rgba(4, 224, 137, 0.3) 8px 8px,
     rgba(4, 224, 137, 0.1) 12px 12px;
+  background: #fff;
 }
 
 .img__proyecto {
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 4/3;
 }
 
 .img__container {
@@ -573,8 +594,13 @@ span.cursor__.tipeando {
   overflow: hidden;
   width: 100%;
   height: 11em;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: var(--redondeo);
+  border-top-right-radius: var(--redondeo);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
 }
 
 .img__container img {
@@ -586,7 +612,6 @@ span.cursor__.tipeando {
 
   vertical-align: middle;
 }
-
 .img__container img:hover {
   -webkit-transform: scale(1.5); /* Safari and Chrome */
   -moz-transform: scale(1.5); /* Firefox */
@@ -600,11 +625,11 @@ span.cursor__.tipeando {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 19em;
+  min-height: 15em;
   padding: 1em 0;
-  background: white;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  background: #fff;
+  border-bottom-left-radius: var(--redondeo);
+  border-bottom-right-radius: var(--redondeo);
 }
 
 .proyectos__ h1 {
@@ -626,8 +651,15 @@ span.cursor__.tipeando {
 }
 
 .sub__tecnologias {
-  font-weight: 800;
+  font-weight: 1000;
   color: rgb(99, 99, 99);
+  font-size: 12px;
+  font-family: var(--fuente-secundaria);
+  margin-top: 0.3em;
+}
+
+.descripcion__proyecto {
+  margin: 1.3em 0em;
 }
 
 .btn-visitar {
@@ -647,7 +679,7 @@ span.cursor__.tipeando {
   font-family: var(--fuente);
   background: transparent;
   padding: 0.5em 1.5rem;
-  border-radius: 50px;
+  border-radius: var(--redondeo);
   transition: ease-out 0.3s;
 }
 
@@ -706,7 +738,7 @@ span.cursor__.tipeando {
 
 .btn__sm {
   font-size: 0.9rem;
-  padding: 0.2rem 0.8rem !important;
+  padding: 0.4rem 1rem !important;
 }
 
 .sss {
@@ -774,7 +806,7 @@ span.cursor__.tipeando {
 
 .modal-content {
   opacity: 0;
-  border-radius: 20px;
+  border-radius: var(--redondeo);
   background-color: #fefefe;
   margin: 5rem auto;
   padding: 20px;
@@ -802,6 +834,93 @@ span.cursor__.tipeando {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* NOTIFICATION */
+.notificacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s 0.5s;
+  --transform: translateY(-100vh);
+  --transition: transform 0.6s;
+  z-index: 980;
+}
+
+.notificacion--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.2s;
+  --transform: translateY(0);
+  --transition: transform 0.6s 0.6s;
+}
+
+.notificacion__container {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+.notificacion__title {
+  font-size: 2.5rem;
+  font-family: var(--fuente-secundaria);
+  font-weight: 800;
+}
+
+.notificacion__paragraph {
+  margin-bottom: 10px;
+  font-family: var(--fuente-secundaria);
+  text-align: center;
+}
+
+.notificacion__img {
+  width: 90%;
+  max-width: 300px;
+}
+
+.notificacion__close {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f26250;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+
+.notification__close:hover {
+  color: #f26250;
+  background-color: #fff;
+}
+.mensaje__error {
+  padding: 0.2em 0.4em 0.6em 0.7em;
+  font-size: 0.8em;
+  color: rgb(250, 54, 54);
+  font-weight: 800;
+  transition: all 3s;
+  text-align: left !important;
+}
+
+.input__error {
+  border: 0.11rem solid rgb(250, 54, 54) !important;
 }
 
 /* ========================== MODAL nuevo =============================== */
@@ -880,7 +999,7 @@ span.cursor__.tipeando {
 /* ========================== FIN MODAL =============================== */
 
 .contacto__ {
-  height: 300px;
+  height: 400px;
   background: white;
 }
 
@@ -889,8 +1008,8 @@ span.cursor__.tipeando {
   font-family: var(--fuente);
   resize: none;
   border: 0.13rem solid #ccc;
-  padding: 0.7rem 1rem;
-  border-radius: 25px;
+  padding: 1rem 1rem;
+  border-radius: var(--redondeo);
   outline: none;
   transition: all 0.2s;
   outline: 0px;
@@ -899,7 +1018,6 @@ span.cursor__.tipeando {
 
 .mensaje__contacto:focus {
   box-shadow: var(--color-primario) 0px 18px 25px -10px;
-
   border: 0.2rem solid var(--color-secundario);
 }
 
@@ -909,7 +1027,7 @@ input {
   resize: none;
   border: 0.13rem solid #ccc;
   padding: 0.7rem 1rem;
-  border-radius: 25px;
+  border-radius: var(--redondeo);
   outline: none;
   transition: all 0.2s;
   outline: 0px;
@@ -948,6 +1066,7 @@ footer p {
 
 .curva__footer {
   margin-bottom: -3.6rem;
+  z-index: 100;
 }
 
 .xdd {
@@ -976,4 +1095,14 @@ footer p {
 
 #check {
   display: none;
+}
+
+.mailto {
+  color: var(--color-primario);
+}
+
+.flex-fill {
+  -webkit-flex: 1 1 auto !important;
+  -ms-flex: 1 1 auto !important;
+  flex: 1 1 auto !important;
 }

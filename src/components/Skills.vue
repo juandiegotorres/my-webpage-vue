@@ -1,20 +1,20 @@
 <template>
     <section>
         <div class="container">
-            <div class="row mt-4">
+            <div class="row mt-2">
                 <div class="col-md-10 mx-auto mb-3">
                     <h3 class="titulo__">Skills</h3>
                 </div>
                 <div class="row mx-auto justify-content-center mb-4 pl-2 pr-2">
                     <div class="col-md-6 col-lg-4">
                         <div class="contenedor__skills">
-                            <h5 class="titulo__skill">Frontend</h5>
+                            <p class="titulo__skill">Frontend</p>
                             <div class="row">
                                 <div class="col-4 text-center">
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/html5-plain.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="HTML 5"
                                             class="icono__skill"
                                         />
                                         <p class="texto__centrado">HTML 5</p>
@@ -24,7 +24,7 @@
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/css3-plain.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="CSS3"
                                             class="icono__skill"
                                         />
                                     </span>
@@ -34,7 +34,7 @@
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/javascript-plain.svg?size=128&color=currentColors"
-                                            alt
+                                            alt="Java Script"
                                             class="icono__skill"
                                         />
                                     </span>
@@ -45,13 +45,13 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="contenedor__skills">
-                            <h5 class="titulo__skill">Backend</h5>
+                            <p class="titulo__skill">Backend</p>
                             <div class="row">
                                 <div class="col-4 text-center">
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/php-plain.svg?size=148&color=currentColor"
-                                            alt
+                                            alt="PHP"
                                             class="icono__skill"
                                         />
                                     </span>
@@ -61,7 +61,7 @@
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/laravel-plain.svg?size=148&color=currentColor"
-                                            alt
+                                            alt="Laravel"
                                             class="icono__skill"
                                         />
                                     </span>
@@ -71,24 +71,24 @@
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/mysql-plain.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="MySql"
                                             class="icono__skill"
                                         />
                                     </span>
-                                    <p class="texto__centrado">MySql</p>
+                                    <p class="texto__centrado">MySQL</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-8">
                         <div class="contenedor__skills">
-                            <h5 class="titulo__skill">Frameworks y otras tecnologías</h5>
+                            <p class="titulo__skill">Frameworks y otras tecnologías</p>
                             <div class="row justify-content-center">
                                 <div class="col-4 col-md-2 text-center">
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/bootstrap-plain.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="Bootstrap"
                                             class="icono__skill"
                                         />
                                     </span>
@@ -98,7 +98,7 @@
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/vuejs-plain.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="VUE"
                                             class="icono__skill"
                                         />
                                     </span>
@@ -109,27 +109,27 @@
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/jquery-plain.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="jQuery"
                                             class="icono__skill"
                                         />
                                     </span>
-                                    <p class="texto__centrado">JQuery</p>
+                                    <p class="texto__centrado">jQuery</p>
                                 </div>
-                                <div class="col-4 col-md-2 text-center">
+                                <div class="col-4 col-md-2 text-center mt-mb-3">
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/github-original.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="GitHub"
                                             class="icono__skill"
                                         />
                                     </span>
                                     <p class="texto__centrado">GitHub</p>
                                 </div>
-                                <div class="col-4 col-md-2 text-center">
+                                <div class="col-4 col-md-2 text-center mt-mb-3">
                                     <span class="justify-content-center">
                                         <img
                                             src="https://icongr.am/devicon/dot-net-plain-wordmark.svg?size=128&color=currentColor"
-                                            alt
+                                            alt="VB.NET"
                                             class="icono__skill"
                                         />
                                     </span>
